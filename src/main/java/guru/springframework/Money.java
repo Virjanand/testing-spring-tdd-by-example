@@ -2,12 +2,18 @@ package guru.springframework;
 
 import java.util.Objects;
 
-public class Money {
+public abstract class Money {
     protected int amount;
 
     public Money(int amount) {
         this.amount = amount;
     }
+
+    public static Money dollar(int amount) {
+        return new Dollar(amount);
+    }
+
+    public abstract Money times(int amount);
 
     @Override
     public boolean equals(Object o) {
