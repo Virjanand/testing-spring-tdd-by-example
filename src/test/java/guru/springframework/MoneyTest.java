@@ -29,7 +29,12 @@ public class MoneyTest {
 
     @Test
     void testEqualityFranc() {
-        assertEquals(new Franc(5), new Franc(5));
-        assertNotEquals(new Franc(8), new Franc(5));
+        assertEquals(Money.franc(5), Money.franc(5));
+        assertNotEquals(Money.franc(8), Money.franc(5));
+    }
+
+    @Test
+    void testCurrency() {
+        assertEquals("USD", Money.dollar(1).currency());
     }
 }
