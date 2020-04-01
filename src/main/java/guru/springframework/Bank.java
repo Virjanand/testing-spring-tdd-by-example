@@ -5,4 +5,7 @@ public class Bank {
         return source.reduce(toCurrency);
     }
 
+    public void addRate(String from, String to, int rate) {
+
+    }
 }
