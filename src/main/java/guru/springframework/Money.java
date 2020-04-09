@@ -45,6 +45,7 @@ public class Money implements Expression {
         return Objects.hash(amount, currency);
     }
 
+    @Override
     public Expression times(int multiplier) {
         return new Money(amount * multiplier, this.currency());
     }
