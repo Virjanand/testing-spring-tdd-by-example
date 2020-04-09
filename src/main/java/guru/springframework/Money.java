@@ -3,8 +3,8 @@ package guru.springframework;
 import java.util.Objects;
 
 public class Money implements Expression {
-    protected int amount;
-    private String currency;
+    protected final int amount;
+    private final String currency;
 
     public Money(int amount, String currency) {
         this.amount = amount;
